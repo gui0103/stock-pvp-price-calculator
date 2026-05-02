@@ -14,7 +14,7 @@ export default function HistoryList({ history, onSelect }) {
 	return (
 		<div style={styles.wrapper}>
 			<h3 style={styles.title}>Histórico</h3>
-			<div style={styles.list}>
+			<div style={styles.list} className="history-scroll">
 				{history.map((item) => {
 					const color = getColor(item.classification);
 					return (
@@ -55,6 +55,8 @@ const styles = {
 		gap: "8px",
 		maxHeight: "320px",
 		overflowY: "auto",
+		marginRight: "-8px",
+		paddingRight: "8px",
 	},
 	card: {
 		display: "flex",

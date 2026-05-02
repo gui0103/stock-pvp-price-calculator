@@ -41,7 +41,7 @@ export default function App() {
 	};
 
 	return (
-		<main style={styles.main}>
+		<main style={styles.main} className="app-main">
 			<h1 style={styles.title}>📊 Calculadora P/VP</h1>
 			<p style={styles.subtitle}>Ações e FIIs brasileiros</p>
 
@@ -71,7 +71,6 @@ const styles = {
 		gap: "24px",
 		padding: "40px 16px",
 		width: "100%",
-		maxWidth: "520px",
 		margin: "0 auto",
 	},
 	title: {

@@ -9,7 +9,7 @@ export default function SearchBar({ onSearch, loading }) {
 	};
 
 	return (
-		<form onSubmit={handleSubmit} style={styles.form}>
+		<form onSubmit={handleSubmit} className="search-form">
 			<input
 				type="text"
 				value={ticker}
@@ -22,7 +22,7 @@ export default function SearchBar({ onSearch, loading }) {
 			<button
 				type="submit"
 				disabled={loading || !ticker.trim()}
-				style={styles.button}
+                className="search-button"
 			>
 				{loading ? "..." : "Buscar"}
 			</button>
@@ -31,11 +31,6 @@ export default function SearchBar({ onSearch, loading }) {
 }
 
 const styles = {
-	form: {
-		display: "flex",
-		gap: "10px",
-		width: "100%",
-	},
 	input: {
 		flex: 1,
 		padding: "12px 16px",
@@ -46,15 +41,5 @@ const styles = {
 		fontSize: "1rem",
 		outline: "none",
 		letterSpacing: "1px",
-	},
-	button: {
-		padding: "12px 24px",
-		borderRadius: "10px",
-		border: "none",
-		background: "#4f6ef7",
-		color: "#fff",
-		fontSize: "1rem",
-		fontWeight: "600",
-		cursor: "pointer",
 	},
 };
