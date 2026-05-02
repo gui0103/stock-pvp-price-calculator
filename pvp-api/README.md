@@ -164,7 +164,7 @@ curl http://localhost:3000/api/asset/ALZR11
 | < 0.80       | 🟢 Com desconto significativo    |
 | 0.80 – 0.99  | 🟡 Leve desconto                 |
 | 1.00         | ⚪ No valor patrimonial          |
-| 1.01 – 1.20  | 🟠 Leve prêmio                   |
+| 1.01 – 1.20  | 🟠 Negociando com prêmio                   |
 | > 1.20       | 🔴 Cara (acima do VP)            |
 
 ---

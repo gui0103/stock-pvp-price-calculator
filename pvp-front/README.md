@@ -112,7 +112,7 @@ Acesse **[http://localhost:5173](http://localhost:5173)**
 | < 0,80 | 🟢 Com desconto significativo | Verde |
 | 0,80 – 0,99 | 🟡 Leve desconto | Amarelo |
 | 1,00 | ⚪ No valor patrimonial | Branco |
-| 1,01 – 1,20 | 🟠 Leve prêmio | Laranja |
+| 1,01 – 1,20 | 🟠 Negociando com prêmio | Laranja |
 | > 1,20 | 🔴 Cara (acima do VP) | Vermelho |
 
 ---

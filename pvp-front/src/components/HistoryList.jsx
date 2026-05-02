@@ -1,16 +1,12 @@
 const colorMap = {
-	"🟢": "#4ade80",
-	"🟡": "#facc15",
-	"⚪": "#e2e8f0",
-	"🟠": "#fb923c",
-	"🔴": "#f87171",
+	"Com desconto significativo": "#00d35f",
+	"Leve desconto": "#a2ff6d",
+	"No valor patrimonial": "#e2e8f0",
+	"Negociando com prêmio": "#fb923c",
+	"Cara (acima do VP)": "#f87171",
 };
 
-const getColor = (classification) => {
-  if (!classification) return '#e1e1e1';
-  const found = Object.keys(colorMap).find((emoji) => classification.startsWith(emoji));
-  return found ? colorMap[found] : '#e1e1e1';
-};
+const getColor = (classification) => colorMap[classification] || "#e1e1e1";
 
 export default function HistoryList({ history, onSelect }) {
 	if (history.length === 0) return null;

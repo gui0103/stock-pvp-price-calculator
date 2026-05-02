@@ -41,12 +41,11 @@ const calculatePVP = async (ticker) => {
   const pvp = parseFloat((currentPrice / bookValue).toFixed(4));
 
   let classification;
-  if (pvp < 0.8)        classification = '🟢 Com desconto significativo';
-  else if (pvp < 1.0)   classification = '🟡 Leve desconto';
-  else if (pvp === 1.0) classification = '⚪ No valor patrimonial';
-  else if (pvp <= 1.2)  classification = '🟠 Leve prêmio';
-  else                  classification = '🔴 Cara (acima do VP)';
-
+if (pvp < 0.8)         classification = 'Com desconto significativo';
+else if (pvp < 1.0)    classification = 'Leve desconto';
+else if (pvp === 1.0)  classification = 'No valor patrimonial';
+else if (pvp <= 1.2)   classification = 'Negociando com prêmio';
+else                   classification = 'Cara (acima do VP)';
   return {
     ticker: upperTicker,
     currentPrice,

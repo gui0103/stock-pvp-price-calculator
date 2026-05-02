@@ -1,15 +1,11 @@
 const colorMap = {
-	"🟢": "#4ade80",
-	"🟡": "#facc15",
-	"⚪": "#e2e8f0",
-	"🟠": "#fb923c",
-	"🔴": "#f87171",
+	"Com desconto significativo": "#00d35f",
+	"Leve desconto": "#a2ff6d",
+	"No valor patrimonial": "#e2e8f0",
+	"Negociando com prêmio": "#fb923c",
+	"Cara (acima do VP)": "#f87171",
 };
-
-const getColor = (classification) => {
-	const emoji = classification?.charAt(0);
-	return colorMap[emoji] || "#e1e1e1";
-};
+const getColor = (classification) => colorMap[classification] || "#e1e1e1";
 
 export default function ResultCard({ data }) {
 	const color = getColor(data.classification);
@@ -35,10 +31,6 @@ export default function ResultCard({ data }) {
 				<Detail
 					label="Valor patrimonial"
 					value={`R$ ${data.bookValuePerShare.toFixed(2)}`}
-				/>
-				<Detail
-					label="VP em cache"
-					value={data.bookValueFromCache ? "Sim" : "Não"}
 				/>
 			</div>
 
