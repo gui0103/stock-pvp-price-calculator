@@ -40,67 +40,27 @@ export default function App() {
 		setError(null);
 	};
 
-	return (
-		<main style={styles.main} className="app-main">
-			<h1 style={styles.title}>📊 Calculadora P/VP</h1>
-			<p style={styles.subtitle}>Ações e FIIs brasileiros</p>
+		return (
+			<main className="app-main">
+				<h1 className="app-title">📊 Calculadora P/VP</h1>
+				<p className="app-subtitle">Ações e FIIs brasileiros</p>
 
-			<SearchBar onSearch={handleSearch} loading={loading} />
+				<SearchBar onSearch={handleSearch} loading={loading} />
 
-			{loading && <Loader />}
-			{error && <p style={styles.error}>{error}</p>}
-			{result && <ResultCard data={result} />}
+				{loading && <Loader />}
+				{error && <p className="app-error">{error}</p>}
+				{result && <ResultCard data={result} />}
 
-			{history.length > 0 && (
-				<div style={styles.historyHeader}>
-					<HistoryList history={history} onSelect={handleSelectFromHistory} />
-					<button onClick={clearHistory} style={styles.clearButton}>
-						Limpar histórico
-					</button>
-				</div>
-			)}
-		</main>
-	);
+				{history.length > 0 && (
+					<div className="app-history-header">
+						<HistoryList history={history} onSelect={handleSelectFromHistory} />
+						<button onClick={clearHistory} className="app-clear-button">
+							Limpar histórico
+						</button>
+					</div>
+				)}
+			</main>
+		);
 }
 
-const styles = {
-	main: {
-		display: "flex",
-		flexDirection: "column",
-		alignItems: "center",
-		gap: "24px",
-		padding: "40px 16px",
-		width: "100%",
-		margin: "0 auto",
-	},
-	title: {
-		fontSize: "2rem",
-		fontWeight: "700",
-		color: "#ffffff",
-	},
-	subtitle: {
-		fontSize: "0.95rem",
-		color: "#888",
-		marginTop: "-16px",
-	},
-	error: {
-		color: "#ff6b6b",
-		fontSize: "0.9rem",
-		textAlign: "center",
-	},
-	historyHeader: {
-		width: "100%",
-		display: "flex",
-		flexDirection: "column",
-		gap: "10px",
-	},
-	clearButton: {
-		alignSelf: "flex-end",
-		background: "none",
-		border: "none",
-		color: "#555",
-		fontSize: "0.75rem",
-		cursor: "pointer",
-		textDecoration: "underline",
-	},
-};
+
