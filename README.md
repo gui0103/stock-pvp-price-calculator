@@ -223,15 +223,3 @@ curl http://localhost:3000/api/asset/ALZR11
 | Biome | Linter & formatter |
 | Brapi | Live stock price data |
 | Status Invest | Book value (VPA) data source |
-
----
-
-## 🐳 Docker (coming soon)
-
-Full containerization with `Dockerfile` and `docker-compose.yml` covering the API, MongoDB, and frontend is planned for the next stage.
-
----
-
-## 📄 License
-
-MIT
