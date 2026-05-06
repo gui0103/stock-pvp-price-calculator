@@ -1,0 +1,26 @@
+{
+  "name": "stock-pvp-price-calculator",
+  "version": "1.0.0",
+  "description": "API to calculate the P/BV ratio (Price-to-Book Value) of Brazilian stocks and REITs, with smart MongoDB caching and real-time market data powered by Brapi.",
+  "main": "index.js",
+  "scripts": {
+    "api": "npm run dev --prefix pvp-api",
+    "front": "npm run dev --prefix pvp-front",
+    "dev": "concurrently --names \"API,FRONT\" --prefix-colors \"blue,magenta\" \"npm run api\" \"npm run front\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gui0103/stock-pvp-price-calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gui0103/stock-pvp-price-calculator/issues"
+  },
+  "homepage": "https://github.com/gui0103/stock-pvp-price-calculator#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
